@@ -1,7 +1,6 @@
 package guru.springframework.domain;
 
 import javax.persistence.*;
-import java.io.Serializable;
 
 @Entity
 public class Notes  {
@@ -10,7 +9,7 @@ public class Notes  {
     private Long id;
 
     @OneToOne
-    private Recipe recepie;
+    private Recipe recipe;
 
     @Lob
     private String recipeNotes;
@@ -23,12 +22,12 @@ public class Notes  {
         this.id = id;
     }
 
-    public Recipe getRecepie() {
-        return recepie;
+    public Recipe getRecipe() {
+        return recipe;
     }
 
-    public void setRecepie(Recipe recepie) {
-        this.recepie = recepie;
+    public void setRecipe(Recipe recipe) {
+        this.recipe = recipe;
     }
 
     public String getRecipeNotes() {
