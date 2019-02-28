@@ -80,7 +80,7 @@
 					</additionalClasspathElements>
 					<parallel>none</parallel>
 
-						<!--<forkCount>3</forkCount>-->
+						<forkCount>5</forkCount>
 						<reuseForks>false</reuseForks>
 						<argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>
 					<argLine>-Dfile.encoding=UTF-8</argLine>
