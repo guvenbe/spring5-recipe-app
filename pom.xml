@@ -70,6 +70,8 @@
 				<artifactId>maven-failsafe-plugin</artifactId>
 				<version>2.22.0</version>
 				<configuration>
+					<useSystemClassLoader>false</useSystemClassLoader>
+					<testFailureIgnore>true</testFailureIgnore>
 					<includes>
 						<include>**/*IT.java</include>
 					</includes>
@@ -78,9 +80,10 @@
 					</additionalClasspathElements>
 					<parallel>none</parallel>
 
-						<!--<forkCount>3</forkCount>-->
-						<!--<reuseForks>true</reuseForks>-->
-						<!--<argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>-->
+						<forkCount>3</forkCount>
+						<reuseForks>false</reuseForks>
+						<argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>
+					<argLine>-Dfile.encoding=UTF-8</argLine>
 
 				</configuration>
 				<executions>
