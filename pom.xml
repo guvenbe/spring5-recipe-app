@@ -65,33 +65,33 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			<!--<plugin>-->
-				<!--<groupId>org.apache.maven.plugins</groupId>-->
-				<!--<artifactId>maven-failsafe-plugin</artifactId>-->
-				<!--<version>2.18.1</version>-->
-				<!--<configuration>-->
-					<!--<includes>-->
-						<!--<include>**/*IT.java</include>-->
-					<!--</includes>-->
-					<!--<additionalClasspathElements>-->
-						<!--<additionalClasspathElement>${basedir}/target/classes</additionalClasspathElement>-->
-					<!--</additionalClasspathElements>-->
-					<!--<parallel>none</parallel>-->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-failsafe-plugin</artifactId>
+				<version>2.22.0</version>
+				<configuration>
+					<includes>
+						<include>**/*IT.java</include>
+					</includes>
+					<additionalClasspathElements>
+						<additionalClasspathElement>${basedir}/target/classes</additionalClasspathElement>
+					</additionalClasspathElements>
+					<parallel>none</parallel>
 
-						<!--&lt;!&ndash;<forkCount>3</forkCount>&ndash;&gt;-->
-						<!--&lt;!&ndash;<reuseForks>true</reuseForks>&ndash;&gt;-->
-						<!--&lt;!&ndash;<argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>&ndash;&gt;-->
+						<!--<forkCount>3</forkCount>-->
+						<!--<reuseForks>true</reuseForks>-->
+						<!--<argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>-->
 
-				<!--</configuration>-->
-				<!--<executions>-->
-					<!--<execution>-->
-						<!--<goals>-->
-							<!--<goal>integration-test</goal>-->
-							<!--<goal>verify</goal>-->
-						<!--</goals>-->
-					<!--</execution>-->
-				<!--</executions>-->
-			<!--</plugin>-->
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>integration-test</goal>
+							<goal>verify</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
 
