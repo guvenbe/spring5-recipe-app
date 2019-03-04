@@ -46,7 +46,7 @@ public class RecipeServiceImplTest {
 
         assertEquals(recipes.size(), 1);
         verify(recipeRepository, times(1)).findAll();
-        verify(recipeRepository, never()).findAll();
+        verify(recipeRepository, never()).findById(anyLong());
     }
 
     @Test
@@ -61,6 +61,6 @@ public class RecipeServiceImplTest {
 
         assertNotNull("Null recipe returned", recipeReturned);
         verify(recipeRepository, times(1)).findById(anyLong());
-        verify(recipeRepository, never()).findById(anyLong());
+        verify(recipeRepository, never()).findAll();
     }
 }
