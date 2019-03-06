@@ -1,5 +1,6 @@
 package guru.springframework.controllers;
 
+import guru.springframework.services.IngredientService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,7 +17,7 @@ public class IndexController {
 
     private final RecipeService recipeService;
 
-    public IndexController(RecipeService recipeService) {
+    public IndexController(RecipeService recipeService, IngredientService ingredientService) {
         this.recipeService = recipeService;
     }
 
