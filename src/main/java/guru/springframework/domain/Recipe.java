@@ -1,12 +1,15 @@
 package guru.springframework.domain;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
-@Data
+@Getter
+@Setter
 @Entity
 public class Recipe {
 
@@ -27,7 +30,7 @@ public class Recipe {
     private Set<Ingredient> ingredients =new HashSet<>();
 
     @Lob
-    private Byte[] images;
+    private Byte[] image;
 
     @Enumerated(value = EnumType.STRING)
     private Difficulty difficulty;
@@ -53,6 +56,7 @@ public class Recipe {
         this.ingredients.add(ingredient);
         return this;
     }
+
 
 
 }
